@@ -2,7 +2,7 @@ FROM python:3.12-slim
 
 WORKDIR /app
 
-ENV MCP_AUTH_TOKEN
+ENV MCP_AUTH_TOKEN=pls-change-me
 
 COPY . .
 
