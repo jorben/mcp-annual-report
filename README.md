@@ -1,4 +1,7 @@
-# MCP Annual Report Server
+<div align="center">
+<h1>Annual Report MCP Server</h1>
+<p align="center">English | <a href="./README_zh.md">中文</a> </p>
+</div>
 
 A FastMCP server designed for analyzing annual reports with Bearer Token authentication. This server provides tools to access and process annual report data stored in markdown format.
 
@@ -23,9 +26,7 @@ mcp-annual-report/
 │   ├── registry.py          # Tool registration manager
 │   └── report.py            # Annual report analysis tools
 ├── data/                    # Annual report data storage
-│   ├── meituan-2019e/       # Sample: Meituan 2019 annual report
-│   ├── popmart-2023e/       # Sample: Pop Mart 2023 annual report
-│   └── tencent-2024e/       # Sample: Tencent 2024 annual report
+│   └── popmart-2023e/       # Sample: Pop Mart 2023 annual report
 ├── Makefile                 # Development commands
 └── .pre-commit-config.yaml  # Code quality configuration
 ```

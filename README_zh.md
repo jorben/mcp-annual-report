@@ -1,4 +1,7 @@
-# MCP 年报分析服务器
+<div align="center">
+<h1>年报MCP服务</h1>
+<p align="center"><a href="./README.md">English</a> | 简体中文</p>
+</div>
 
 一个专为年报分析设计的 FastMCP 服务器，具备 Bearer Token 身份验证功能。该服务器提供工具来访问和处理以 Markdown 格式存储的年报数据。
 
@@ -23,9 +26,7 @@ mcp-annual-report/
 │   ├── registry.py          # 工具注册管理器
 │   └── report.py            # 年报分析工具
 ├── data/                    # 年报数据存储
-│   ├── meituan-2019e/       # 示例：美团 2019 年报
-│   ├── popmart-2023e/       # 示例：泡泡玛特 2023 年报
-│   └── tencent-2024e/       # 示例：腾讯 2024 年报
+│   └── popmart-2023e/       # 示例：泡泡玛特 2023 年报
 ├── Makefile                 # 开发命令
 └── .pre-commit-config.yaml  # 代码质量配置
 ```
