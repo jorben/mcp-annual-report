@@ -6,13 +6,16 @@ WORKDIR /app
 RUN apt-get update && \
     apt-get install -y locales && \
     rm -rf /var/lib/apt/lists/* && \
-    sed -i '/en_US.UTF-8/s/^# //g' /etc/locale.gen && \
-    locale-gen
+    echo "en_US.UTF-8 UTF-8" > /etc/locale.gen && \
+    echo "zh_CN.UTF-8 UTF-8" >> /etc/locale.gen && \
+    locale-gen && \
+    update-locale LANG=en_US.UTF-8 LC_ALL=en_US.UTF-8
 
 # 设置环境变量确保 UTF-8 编码
 ENV MCP_AUTH_TOKEN=pls-change-me
 ENV LANG=en_US.UTF-8
 ENV LC_ALL=en_US.UTF-8
+ENV LC_CTYPE=en_US.UTF-8
 ENV PYTHONIOENCODING=utf-8
 ENV PYTHONUNBUFFERED=1
 

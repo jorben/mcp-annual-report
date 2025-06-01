@@ -7,6 +7,7 @@ services:
       - MCP_AUTH_TOKEN=pls-change-me
       - LANG=en_US.UTF-8
       - LC_ALL=en_US.UTF-8
+      - LC_CTYPE=en_US.UTF-8
       - PYTHONIOENCODING=utf-8
       - PYTHONUNBUFFERED=1
     volumes:
