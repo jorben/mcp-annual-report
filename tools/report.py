@@ -40,19 +40,10 @@ def register_report_tools(mcp):
         # 根据offset和limit计算需要返回的md文件列表
         md_files = md_files[offset : offset + limit]
 
-        # 读取md文件内容，明确指定UTF-8编码并添加错误处理
-        content_list = []
-        for md_file in md_files:
-            try:
-                with open(
-                    f"data/{report_name}/{md_file}", encoding="utf-8", errors="replace"
-                ) as f:
-                    content_list.append(f.read())
-            except Exception as e:
-                # 如果读取失败，记录错误信息但继续处理其他文件
-                content_list.append(f"[Error reading {md_file}: {str(e)}]")
-
-        content = "\n".join(content_list)
+        # 返回md文件内容Add commentMore actions
+        content = "\n".join(
+            [open(f"data/{report_name}/{md_file}").read() for md_file in md_files]
+        )
 
         return {
             "content": content,
