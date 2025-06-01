@@ -1,0 +1,13 @@
+services:
+  annual-report-mcp:
+    image: jorbenzhu/mcp-annual-report:latest
+    ports:
+      - 4200:4200
+    environment:
+      - MCP_AUTH_TOKEN=pls-change-me
+      - LANG=C.UTF-8
+      - LC_ALL=C.UTF-8
+      - PYTHONIOENCODING=utf-8
+    volumes:
+      - ./data:/app/data
+    restart: always
