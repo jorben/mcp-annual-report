@@ -10,7 +10,7 @@ def register_report_tools(mcp):
 
     @mcp.tool()
     async def list_reports() -> list[str]:
-        """Get the list of annual reports."""
+        """Get the list of reports."""
 
         # 获取data目录下的所有文件夹名称，过滤掉.DS_Store文件
         report_list = [f for f in os.listdir("data") if not f.startswith(".")]
@@ -20,7 +20,9 @@ def register_report_tools(mcp):
     async def get_report_content(
         report_name: Annotated[
             str,
-            Field(description="Name of the report to get content from list_reports"),
+            Field(
+                description="Name of the report to get content, name from list_reports"
+            ),
         ],
         offset: Annotated[
             int, Field(description="Offset of the report page", ge=0)
